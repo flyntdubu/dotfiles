@@ -1,4 +1,6 @@
-<p align="center"><img src="art/banner-2x.png"></p>
+## HAI :3
+
+Copied this from https://github.com/driesvints/dotfiles, with my own modifications. Some day I'll make my own from scratch!!! (coping)
 
 ## Introduction
 
