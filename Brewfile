@@ -35,6 +35,7 @@ brew 'node'
 brew 'yarn'
 brew 'python'
 brew 'pure'
+brew 'bitwarden-cli'
 
 # Apps
 cask 'bitwarden'

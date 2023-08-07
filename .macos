@@ -778,21 +778,25 @@ defaults write org.m0k.transmission RandomPort -bool true
 
 ##############################################################################
 
-# #!/bin/bash 
-# LOGGED_USER=`stat -f%Su /dev/console` 
-# sudo su $LOGGED_USER -c 'defaults delete com.apple.dock persistent-apps' 
+#!/bin/bash 
+LOGGED_USER=`stat -f%Su /dev/console` 
+sudo su $LOGGED_USER -c 'defaults delete com.apple.dock persistent-apps' 
 
-# dock_item() { 
+dock_item() { 
 
-#     printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1" 
+    printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1" 
 
-# } 
+} 
 
-# notes=$(dock_item /System/Applications/Notes.app) 
-# screenshot=$(dock_item /System/Applications/Utilities/Screenshot.app) 
+iterm=$(dock_item /Applications/iTerm.app) 
+messages=$(dock_item /System/Applications/Messages.app) 
+spotify=$(dock_item /Applications/Spotify.app) 
+bitwarden=$(dock_item /Applications/Bitwarden.app) 
+safari=$(dock_item /Applications/Safari.app) 
+spark=$(dock_item /Applications/Spark.app) 
 
-# sudo su $LOGGED_USER -c "defaults write com.apple.dock persistent-apps -array '$notes' '$screenshot'" 
-# killall Dock 
+sudo su $LOGGED_USER -c "defaults write com.apple.dock persistent-apps -array '$iterm' '$bitwarden' '$safari' '$spark' '$messages' '$spotify'" 
+killall Dock 
 
 ###############################################################################
 # Kill affected applications                                                  #
