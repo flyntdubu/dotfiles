@@ -792,10 +792,13 @@ iterm=$(dock_item /Applications/iTerm.app)
 messages=$(dock_item /System/Applications/Messages.app) 
 spotify=$(dock_item /Applications/Spotify.app) 
 bitwarden=$(dock_item /Applications/Bitwarden.app) 
+vsc=$(dock_item /Applications/Visual\ Studio\ Code.app) 
 safari=$(dock_item /Applications/Safari.app) 
 spark=$(dock_item /Applications/Spark.app) 
+lp=$(dock_item /System/Applications/Launchpad.app) 
+st=$(dock_item /System/Applications/System\ Settings.app) 
 
-sudo su $LOGGED_USER -c "defaults write com.apple.dock persistent-apps -array '$iterm' '$bitwarden' '$safari' '$spark' '$messages' '$spotify'" 
+sudo su $LOGGED_USER -c "defaults write com.apple.dock persistent-apps -array '$iterm' '$vsc' '$bitwarden' '$safari' '$spark' '$messages' '$spotify' '$lp' '$st'" 
 killall Dock 
 
 ###############################################################################
