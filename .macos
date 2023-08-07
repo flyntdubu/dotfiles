@@ -33,7 +33,7 @@ sudo nvram SystemAudioVolume=" "
 # defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
 # Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Always show scrollbars
 # defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -383,8 +383,8 @@ defaults write com.apple.dock minimize-to-application -bool true
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
-# Show only open applications in the Dock
-defaults write com.apple.dock static-only -bool true
+# Show only open applications in the Dock (when set to true)
+defaults write com.apple.dock static-only -bool false
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
@@ -775,6 +775,24 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 # Randomize port on launch
 defaults write org.m0k.transmission RandomPort -bool true
+
+##############################################################################
+
+# #!/bin/bash 
+# LOGGED_USER=`stat -f%Su /dev/console` 
+# sudo su $LOGGED_USER -c 'defaults delete com.apple.dock persistent-apps' 
+
+# dock_item() { 
+
+#     printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1" 
+
+# } 
+
+# notes=$(dock_item /System/Applications/Notes.app) 
+# screenshot=$(dock_item /System/Applications/Utilities/Screenshot.app) 
+
+# sudo su $LOGGED_USER -c "defaults write com.apple.dock persistent-apps -array '$notes' '$screenshot'" 
+# killall Dock 
 
 ###############################################################################
 # Kill affected applications                                                  #

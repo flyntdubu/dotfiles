@@ -36,3 +36,4 @@ alias wip="commit wip"
 
 # Other
 alias o="open ."
+alias t="tmux -CC"

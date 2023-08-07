@@ -79,6 +79,6 @@ cask 'font-fira-code'
 mas 'Giphy Capture', id: 668208984
 mas 'Speedtest', id: 1153157709
 mas 'Amphetamine', id: 937984704
-mas 'Wipr', id: 1030595027
+mas 'Wipr', id: 1320666476
 mas 'Magnet', id: 441258766
 mas 'GoodNotes 5', id: 1444383602
