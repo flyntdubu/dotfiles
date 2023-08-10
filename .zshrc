@@ -90,6 +90,7 @@ plugins=(
   colored-man-pages
   colorize
   cp
+  zsh-z
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
