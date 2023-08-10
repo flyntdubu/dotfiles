@@ -36,6 +36,7 @@ brew 'yarn'
 brew 'python'
 brew 'pure'
 brew 'bitwarden-cli'
+brew 'neovim'
 
 # Apps
 cask 'bitwarden'
