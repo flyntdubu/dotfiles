@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
+tap 'gantoreno/macfetch'
 
 # Binaries
 brew 'awscli'
@@ -37,6 +38,8 @@ brew 'python'
 brew 'pure'
 brew 'bitwarden-cli'
 brew 'neovim'
+brew 'exa'
+brew 'macfetch'
 
 # Apps
 cask 'bitwarden'
