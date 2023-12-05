@@ -53,3 +53,8 @@ export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+eval "$(pyenv virtualenv-init -)"
